@@ -13,6 +13,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.example.allseven64.cataloguemovieuiux.fragment.AboutFragment;
 import com.example.allseven64.cataloguemovieuiux.fragment.FavoriteFragment;
 import com.example.allseven64.cataloguemovieuiux.fragment.HomeFragment;
 import com.example.allseven64.cataloguemovieuiux.fragment.NowPlayingFragment;
@@ -98,6 +99,11 @@ public class MainActivity extends AppCompatActivity
             // Handle the home action
             title = getResources().getString(R.string.home);;
             fragment = new HomeFragment();
+        }
+        else if (id == R.id.nav_about) {
+            title = getResources().getString(R.string.about);
+            fragment = new AboutFragment();
+            fragment.setArguments(bundle);
         }
         else if (id == R.id.nav_now_playing) {
             title = getResources().getString(R.string.now_playing);
